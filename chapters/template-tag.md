@@ -6,10 +6,14 @@ This functions is extremely powerful, you can use not just to manipulate your st
 ## THE SYNTAX
 
 ```js
-function foo(strings, ...values) {
-  // do whatever you want
+function upper(strings, ...values) {
+  strings.forEach(str => {
+    values;
+  });
 }
-let a = [1, 2, 3];
+let name = "ramon";
+let twitter = "ramon-src";
+let topic = "JS Recent parts";
 
-foo`Try this ${a}`;
+upper`Hello ${name} (@${twitter}), welcome to ${topic}!`;
 ```
