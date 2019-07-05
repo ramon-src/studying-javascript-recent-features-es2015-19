@@ -16,3 +16,9 @@ str.padStart(8, "12345"); // "123Hello"
 str.padStart(8, "ab"); // "abaHello"
 str.padStart(9, "ab"); // "ababHello"
 ```
+
+With the RTL system the javascript have problems when use multiline strings...
+
+## TRIMMING
+
+The string trimming was added in es2019!
