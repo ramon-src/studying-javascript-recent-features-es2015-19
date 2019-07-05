@@ -31,4 +31,11 @@ str.padEnd(9, "ab"); // "Helloabab"
 
 ## TRIMMING
 
-The string trimming was added in es2019!
+The string trimming method was in Javascript many time ago. But now in the es2019 spec the javascript added new methods for trimming strings.
+
+```js
+let str = "   Hello   ";
+str.trimStart(); // "Hello   "
+str.trimEnd(); // "   Hello"
+str.trim(); // "Hello"
+```
