@@ -19,6 +19,16 @@ str.padStart(9, "ab"); // "ababHello"
 
 With the RTL system the javascript have problems when use multiline strings...
 
+```js
+let str = "Hello";
+str.padEnd(5); // "Hello"
+str.padEnd(8); // "Hello   "
+str.padEnd(8, "*"); // "Hello***"
+str.padEnd(8, "12345"); // "Hello123"
+str.padEnd(8, "ab"); // "Helloaba"
+str.padEnd(9, "ab"); // "Helloabab"
+```
+
 ## TRIMMING
 
 The string trimming was added in es2019!
