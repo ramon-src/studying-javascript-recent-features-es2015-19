@@ -32,3 +32,23 @@ var [first, second = 10, third] = data();
 ```
 
 Default value expression only picks up when there is an undefined value in the return of the pattern. As above in the second position. If it was null, we will not get 10 as value.
+
+## Gather syntax to get the restant values
+
+```js
+// Declarative imperative
+function data() {
+  return [1, , 3, 4, 5, 6];
+}
+
+var tmp = data();
+var third = tmp[2];
+var fourth = tmp.slice(3); // this will return [4,5,6]
+
+// Using deconstructing pattern and gather syntax
+
+function data() {
+  return [1, , 3, 4, 5, 6];
+}
+var [first, second = 10, third, ...fourth] = data();
+```
