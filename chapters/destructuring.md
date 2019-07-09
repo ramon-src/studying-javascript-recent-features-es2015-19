@@ -30,3 +30,5 @@ function data() {
 }
 var [first, second = 10, third] = data();
 ```
+
+Default value expression only picks up when there is an undefined value in the return of the pattern. As above in the second position. If it was null, we will not get 10 as value.
