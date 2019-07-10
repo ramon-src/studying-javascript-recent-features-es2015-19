@@ -52,3 +52,16 @@ function data() {
 }
 var [first, second = 10, third, ...fourth] = data();
 ```
+
+If you want a new variable with the values of the pattern and want the decomposed parts too you can use like below
+
+```js
+function data() {
+  return [1, , 3, 4, 5, 6];
+}
+var [first, second = 10, third, ...fourth] = (tmp = data());
+
+// tmp will return [1, undefined, 3, 4, 5, 6]
+// first 1
+// fourth will return [4,5,6]
+```
