@@ -77,11 +77,33 @@ var test = {};
 
 [test.first, test.second = 10, test.third, ...test.fourth] = data();
 
-// then test will returns {first: 1, second: 10, third: 3, fourth: [4,5,6]}
+// then test variable  will returns {first: 1, second: 10, third: 3, fourth: [4,5,6]}
 
 var test = [];
 
 [test[3], test[4] = 10, test[5], ...test[8]] = data();
 
 //[undefined, undefined, undefined, 1, 10, 3, undefined, undefined, [4, 5, 6]]; something like that
+```
+
+## SWAPPING VALUES
+
+To swap values without a temporary variable we can use the deconstruct array to do the same work
+
+```js
+var x = 10;
+var y = 20;
+
+var tmp = x;
+x = y;
+y = tmp;
+```
+
+Using the deconstruct
+
+```js
+var x = 10;
+var y = 20;
+
+[y, x] = [x, y];
 ```
