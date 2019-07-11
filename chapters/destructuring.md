@@ -65,3 +65,23 @@ var [first, second = 10, third, ...fourth] = (tmp = data());
 // first 1
 // fourth will return [4,5,6]
 ```
+
+The destructuring is about assignment and not about declaration, so we can declare the variables before the desctructuring
+
+```js
+var first, second, third, fourth;
+
+[first, second = 10, third, ...fourth] = data();
+
+var test = {};
+
+[test.first, test.second = 10, test.third, ...test.fourth] = data();
+
+// then test will returns {first: 1, second: 10, third: 3, fourth: [4,5,6]}
+
+var test = [];
+
+[test[3], test[4] = 10, test[5], ...test[8]] = data();
+
+//[undefined, undefined, undefined, 1, 10, 3, undefined, undefined, [4, 5, 6]]; something like that
+```
