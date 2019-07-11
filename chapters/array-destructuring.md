@@ -107,3 +107,40 @@ var y = 20;
 
 [y, x] = [x, y];
 ```
+
+## DESTRUCTURING IN PARAMETERS
+
+```js
+function ([
+  first,
+  second,
+  third
+]) {
+  //inside the function we can use the variables deconstructed
+  // first, second and third
+}
+```
+
+## ILLEGAL VALUES
+
+If we pass null values or another other values into deconstruct array expression we will get a type error because we are trying to access positions in array to assign values to variables and the positions doesnt exists because the type is not an array
+
+```js
+function destruct([first, second, third]) {
+  console.log(first);
+}
+destruct("a"); // this will pass because the js coercion converts the string into an array
+
+//below all the results cause an type error
+destruct({ b: 10 });
+destruct(17);
+destruct(17, "a", { b: 1 });
+```
+
+We can set a default value to fallback this errors, when the parameters are falsy they will return an empty array as below
+
+```js
+function destruct([first, second, third] = []) {
+  console.log(first);
+}
+```
