@@ -148,3 +148,18 @@ function destruct([first, second, third] = []) {
   console.log(first);
 }
 ```
+
+## NESTED DESTRUCTURING PATTERN
+
+```js
+var [first, [second, third], forth] = [1, [2, 3], 4];
+```
+
+With default values
+
+```js
+var [first = 10, [second = 5, third] = [], forth = 20] = [1, [2, 3], 4];
+
+var [first = 10, [second = 5, third] = [], forth = 20] = [1, undefined, 4];
+// the second var will return 5  and third undefined
+```
