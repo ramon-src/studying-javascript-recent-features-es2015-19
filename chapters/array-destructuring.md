@@ -53,6 +53,8 @@ function data() {
 var [first, second = 10, third, ...fourth] = data();
 ```
 
+## DESTRUCTURING BUT GETTING THE ENTIRE ARRAY TOO
+
 If you want a new variable with the values of the pattern and want the decomposed parts too you can use like below
 
 ```js
@@ -65,6 +67,8 @@ var [first, second = 10, third, ...fourth] = (tmp = data());
 // first 1
 // fourth will return [4,5,6]
 ```
+
+## DESTRUCTURING IS ABOUT ASSIGNMENT
 
 The destructuring is about assignment and not about declaration, so we can declare the variables before the desctructuring
 
