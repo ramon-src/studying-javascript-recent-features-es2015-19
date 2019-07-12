@@ -84,3 +84,28 @@ tmp = { a: first, b: second, ...third } = data();
 // Or we need to use an parenthesis involving the whole expression
 ({ a: first, b: second, ...third } = data());
 ```
+
+## DEFAULT VALUE FOR EMPTY OBJECTS
+
+```js
+function data() {
+  return;
+}
+
+var { a: first, b: second, ...third } = data() || {};
+```
+
+When the source and target have the same name we can use as shown below
+
+```js
+function data() {
+  return {
+    first: 20
+  };
+}
+
+var { first } = data() || {};
+// And adding a fallback for default value to it...
+var { first = 42 } = data() || {};
+// So if first was set as null or undefined in data function we will get the 42 value
+```
