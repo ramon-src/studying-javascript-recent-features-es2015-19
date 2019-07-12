@@ -125,9 +125,10 @@ function data() {
 var { a: first, b: { c, d } = {} } = data();
 /*
   Then we will get
-  first returning 10
-  b as undefined
-  c returning 50
-  d returning 70
+    first returning 10
+    b as undefined
+    c returning 50
+    d returning 70
+  If we have no b property in the data object returned we will get the empty object assign in the destructuring pattern
 */
 ```
