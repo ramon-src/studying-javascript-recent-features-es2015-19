@@ -109,3 +109,25 @@ var { first } = data() || {};
 var { first = 42 } = data() || {};
 // So if first was set as null or undefined in data function we will get the 42 value
 ```
+
+## NESTED OBJECTS
+
+```js
+function data() {
+  return {
+    a: 10,
+    b: {
+      c: 50,
+      d: 70
+    }
+  };
+}
+var { a: first, b: { c, d } = {} } = data();
+/*
+  Then we will get
+  first returning 10
+  b as undefined
+  c returning 50
+  d returning 70
+*/
+```
