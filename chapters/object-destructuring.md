@@ -132,3 +132,19 @@ var { a: first, b: { c, d } = {} } = data();
   If we have no b property in the data object returned we will get the empty object assign in the destructuring pattern
 */
 ```
+
+## DEFAULT ASSIGNMENT PRACTICE
+
+A better way to make the default assignment is
+
+```js
+var obj = {
+  a: 10,
+  b: 20,
+  c: {
+    a: 15
+  }
+};
+
+var { a, b = 30, c = {} } = obj;
+```
