@@ -148,3 +148,14 @@ var obj = {
 
 var { a, b = 30, c = {} } = obj;
 ```
+
+## PARAMETER OBJECTS
+
+If you want to destructuring an object from parameters is not a good idea to add another parameters in a function. Why dont put the second parameter inside the object? ;)
+
+```js
+function data({ a = 10, c: { b } } = {}) {
+  console.log(c);
+}
+data({ a: 5, c: { b: 10 } });
+```
