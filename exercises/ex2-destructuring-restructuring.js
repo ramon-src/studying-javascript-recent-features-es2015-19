@@ -52,7 +52,8 @@ fakeAjax("http://get-the-workshop.tld", handleResponse);
 function handleResponse({
   topic = defaults.topic,
   format = defaults.format,
-  slides: { start = defaults.slides.start, end = defaults.slides.end } = {}
+  slides: { start = defaults.slides.start, end = defaults.slides.end } = {},
+  ...otherOptions
 } = {}) {
   debugger;
   TestCase({
@@ -61,6 +62,16 @@ function handleResponse({
     slides: {
       start,
       end
-    }
+    },
+    ...otherOptions
   });
 }
+
+/**
+ *
+ * OTHER OPTIONS
+ *
+ * in this case we can pass many other properties in the obecjt parameter
+ * then all this properties with the gather syntax will be merged into the object
+ *
+ */
