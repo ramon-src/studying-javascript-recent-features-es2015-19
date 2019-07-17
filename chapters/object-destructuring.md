@@ -159,3 +159,23 @@ function data({ a = 10, c: { b } } = {}) {
 }
 data({ a: 5, c: { b: 10 } });
 ```
+
+## NAMED ARGUMENTS
+
+They set default arguments for functions, to avoid the forgotten properties in objects
+
+```js
+function foo({ name = "ramon", id = -1 }) {
+  console.log(name);
+  console.log(id);
+}
+
+foo({ id: 10 });
+
+function bar(name = "ramon", id = -1) {
+  console.log(name);
+  console.log(id);
+}
+
+bar("joao");
+```
