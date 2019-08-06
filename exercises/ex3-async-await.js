@@ -7,7 +7,7 @@ function getFile(file) {
 /**
  * Load files asynchronously and print them synchronously
  * The await pr must be inside a regular for loop because if it was inside a function
- * it will cause an syntax error, saying that the word await can not be inside a function
+ * it will cause an syntax error, saying that the word await keyword must be inside an async function.
  */
 async function loadFiles(files) {
   var prs = files.map(getFile);
